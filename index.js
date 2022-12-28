@@ -81,8 +81,12 @@ $("ul li").click(function() {
     });
     playSound("right");
     setTimeout(function(){
+      cardAnim.destroy();
+
+      $(".card2").prepend('<img />')
       $(".card2 img").attr("src", "img/"+currentCharacterName+".jpg");
       $(".card2 img").addClass("after-image");
+
     }, 500);
     setTimeout(function(){
       document.location.reload();
